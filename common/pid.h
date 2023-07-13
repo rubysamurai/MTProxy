@@ -22,6 +22,8 @@
               2014 Vitaly Valtman
 */
 
+#include <stdint.h>
+
 #pragma once
 
 #pragma pack(push,4)
@@ -29,14 +31,14 @@
 struct process_id {
   unsigned ip;
   short port;
-  unsigned short pid;
+  uint32_t pid;
   int utime;
 };
 
 struct process_id_ext {
   unsigned ip;
   short port;
-  unsigned short pid;
+  uint32_t pid;
   int utime;
   int actor_id;
 };
